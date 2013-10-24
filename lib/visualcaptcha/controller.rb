@@ -4,6 +4,7 @@ module VisualCaptcha
       return true if Rails.env.test?
 
       if params["captcha-value"]
+        return false unless session[:captcha]
         challenge = session[:captcha]
         result = challenge.answer.encrypted == params["captcha-value"]
         return result
