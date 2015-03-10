@@ -1,3 +1,4 @@
+require 'less-rails'
 require "visualcaptcha/version"
 require "visualcaptcha/engine"
 
